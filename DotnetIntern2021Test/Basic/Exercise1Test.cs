@@ -1,4 +1,5 @@
 using DotnetIntern2021;
+using DotnetIntern2021.Basic;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -6,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotnetIntern2021Test
+namespace DotnetIntern2021Test.Basic
 {
-    public class testExercise1
+    public class Exercise1Test
     {
         private readonly Exercise1 exercise1 = new();
         
