@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DotnetIntern2021Test
 {
-    public class DemoTest
+    public class testExercise5
     {
         private readonly Exercise5 exercise5 = new();
         [TestCase(160, new[] { 153 })]
