@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DotnetIntern2021Test
 {
-    public class DemoTest
+    public class Test
     {
         private readonly Exercise4 exercise4 = new();
 
@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test
         [TestCase(13, new[] { 1, 2, 3, 5, 8 })]
         public void TestExercise4(int a, int[] expected)
         {
-            Assert.AreEqual(exercise4.fibo(a),expected);
+            Assert.AreEqual(exercise4.fibo(a), expected);
         }
     }
 }
