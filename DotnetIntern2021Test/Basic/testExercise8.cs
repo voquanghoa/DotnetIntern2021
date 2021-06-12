@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace DotnetIntern2021Test
+namespace DotnetIntern2021Test.Basic
 {
     class testExercise8
     {
