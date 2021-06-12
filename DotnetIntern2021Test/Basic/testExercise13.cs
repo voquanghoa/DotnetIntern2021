@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DotnetIntern2021;
+using DotnetIntern2021.Basic;
 using NUnit.Framework;
-namespace DotnetIntern2021Test
+namespace DotnetIntern2021Test.Basic
 {
     class testExercise13
     {
