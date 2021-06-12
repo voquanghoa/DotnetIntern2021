@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotnetIntern2021Test
+namespace DotnetIntern2021Test.Basic
 {
     public class testExercise5
     {
