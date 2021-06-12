@@ -1,4 +1,4 @@
-using DotnetIntern2021;
+using DotnetIntern2021.Basic;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
