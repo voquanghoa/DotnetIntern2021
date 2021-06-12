@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace DotnetIntern2021
+namespace DotnetIntern2021.Basic
 {
     public class Exercise13
     {
