@@ -13,7 +13,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(121,121)]
         [TestCase(333,333)]
         [TestCase(2345,5432)]
-        public void test(int a, int expected)
+        public void Test(int a, int expected)
         {
             Assert.AreEqual(exercise12.Palindrome(a), expected);
         }
