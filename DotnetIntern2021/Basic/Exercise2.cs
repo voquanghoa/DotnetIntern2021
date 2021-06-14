@@ -8,7 +8,7 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise2
     {
-        public int sumCS(int a)
+        public int SumCS(int a)
         {
             int answer = 0;
             while (a > 0)
