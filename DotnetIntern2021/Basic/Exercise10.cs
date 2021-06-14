@@ -1,9 +1,10 @@
 using System;
+
 namespace DotnetIntern2021.Basic
 {
     public class Exercise10
     {
-        public double cubeRoot(double n)
+        public double CubeRoot(double n)
         {
             double x = n;
             double root;
@@ -13,15 +14,14 @@ namespace DotnetIntern2021.Basic
             {
                 count++;
                 root = x - (Math.Pow(x, 3) - n) / (3 * x * x);
-                    //0.5 * (x + n / x);
 
                 if (Math.Abs(root - x) < 0.00001)
                     break;
                 x = root;
             }
-
-            return Math.Round(root,4);
+            return Math.Round(root, 4);
         }
 
     }
+
 }
