@@ -7,7 +7,8 @@ using DotnetIntern2021.Basic;
 using NUnit.Framework;
 namespace DotnetIntern2021Test.Basic
 {
-    class testExercise13
+    class TestExercise13
+
     {
         private readonly Exercise13 exercise13 = new();
         [TestCase("128168123", new[] { "1.28.168.123", "12.8.168.123", "12.81.68.123",
