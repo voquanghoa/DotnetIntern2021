@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(13, new[] { 1, 2, 3, 5, 8 })]
         public void TestExercise4(int a, int[] expected)
         {
-            Assert.AreEqual(exercise4.fibo(a), expected);
+            Assert.AreEqual(exercise4.Fibo(a), expected);
         }
     }
 }
