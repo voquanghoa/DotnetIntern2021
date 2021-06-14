@@ -8,7 +8,7 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise4
     {
-        public List<int> fibo(int n)
+        public List<int> Fibo(int n)
         {
             var a = new  List<int>();
             if (n == 1)
