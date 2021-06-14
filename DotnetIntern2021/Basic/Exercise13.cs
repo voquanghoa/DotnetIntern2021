@@ -23,7 +23,8 @@ namespace DotnetIntern2021.Basic
                                 if (s.StartsWith(ip3))
                                     for (int d = 0; d <= 255; d++)
                                     {
-                                        if (s.CompareTo(ip3 + d.ToString()) == 0)
+                                        if (string.Equals(ip3, d))
+
                                         {
                                             result.Add($"{a}.{b}.{c}.{d}");
 
