@@ -8,9 +8,9 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise11
     {
-        public int reverse(int n)
+        public int Reverse(int n)
         {
-            String s = radixChange(n);
+            String s = RadixChange(n);
             int m = 0;
             int h = s.Length - 1;
             for (int i = 0; i <= h; i++)
@@ -22,7 +22,7 @@ namespace DotnetIntern2021.Basic
             }
             return m;
         }
-        public string radixChange(int n)
+        public string RadixChange(int n)
         {
             String a = "";
             for (int i = 0; n > 0; i++)
