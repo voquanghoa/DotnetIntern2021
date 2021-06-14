@@ -8,14 +8,14 @@ using NUnit.Framework;
 
 namespace DotnetIntern2021Test.Basic
 {
-    class testExercise6
+    class TestExercise6
     {
         private readonly Exercise6 exercise6 = new();
          [TestCase(2,35)]
          [TestCase(3, 143)]
-        public void TestExercise2(int a, int expected)
+        public void TestEx6(int a, int expected)
          {
-             Assert.AreEqual(exercise6.sum(a), expected);
+             Assert.AreEqual(exercise6.Sum(a), expected);
          }
     }
 }
