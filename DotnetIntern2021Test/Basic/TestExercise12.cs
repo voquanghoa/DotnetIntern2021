@@ -7,7 +7,7 @@ using DotnetIntern2021.Basic;
 using NUnit.Framework;
 namespace DotnetIntern2021Test.Basic
 {
-    class testExercise12
+    class TestExercise12
     {
         private readonly Exercise12 exercise12 = new Exercise12();
         [TestCase(121,121)]
@@ -15,7 +15,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(2345,5432)]
         public void test(int a, int expected)
         {
-            Assert.AreEqual(exercise12.palindrome(a), expected);
+            Assert.AreEqual(exercise12.Palindrome(a), expected);
         }
     }
 }
