@@ -8,7 +8,7 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise3
     {
-        public string prime(int n)
+        public string Prime(int n)
         {
             string answer = "";
             int i = 2;
