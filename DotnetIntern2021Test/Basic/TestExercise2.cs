@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DotnetIntern2021Test.Basic
 {
-    public class testExercise2
+    public class TestExercise2
     {
         private readonly Exercise2 exercise2 = new();
 
@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(10, 1)]
         public void TestExercise2(int a, int expected)
         {
-            Assert.AreEqual(exercise2.sumCS(a), expected);
+            Assert.AreEqual(exercise2.SumCS(a), expected);
         }
     }
 }
