@@ -3,7 +3,7 @@ namespace DotnetIntern2021.Basic
 {
 	public class Exercise7
 	{
-		public int giaiThua(int n)
+		public int GiaiThua(int n)
 		{
 		if (n == 0)
 		{
@@ -11,7 +11,7 @@ namespace DotnetIntern2021.Basic
 		}
 		else
 		{
-		    return n * giaiThua(n - 1);
+		    return n * GiaiThua(n - 1);
 		}
 	    }
 	}
