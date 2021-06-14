@@ -17,6 +17,10 @@ namespace DotnetIntern2021.Basic
                         var ip2 = ip1 + b;
 
                         if (s.StartsWith(ip2))
+                        {
+                        ....
+                        }
+
                             for (int c = 0; c <= 255; c++)
                             {
                                 var ip3 = ip2 + c.ToString();
