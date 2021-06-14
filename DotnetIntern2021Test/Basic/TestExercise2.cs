@@ -15,7 +15,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(153,9)]
         [TestCase(6, 6)]
         [TestCase(10, 1)]
-        public void TestExercise2(int a, int expected)
+        public void TestEx2(int a, int expected)
         {
             Assert.AreEqual(exercise2.SumCS(a), expected);
         }
