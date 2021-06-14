@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DotnetIntern2021Test.Basic
 {
-    public class testExercise3
+    public class TestExercise3
     {
         private readonly Exercise3 exercise3 = new();
 
@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(600, "2*2*2*3*5*5")]
         public void TestExercise3(int a, string expected)
         {
-            Assert.AreEqual(exercise3.prime(a), expected);
+            Assert.AreEqual(exercise3.Prime(a), expected);
         }
     }
 }
