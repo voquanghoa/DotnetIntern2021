@@ -9,15 +9,16 @@ namespace DotnetIntern2021.Basic
     public class Exercise12
     {
         public int Palindrome(int n)
-
         {
-            string s = n.ToString();
-            String temp = "";
-            for (int i = s.Length - 1; i >=0; i--)
+            int temp = n;
+            int reverse = 0, rem;
+            while (temp != 0)
             {
-                temp += s[i];
+                rem = temp % 10;
+                reverse = reverse * 10 + rem;
+                temp /= 10;
             }
-            return Convert.ToInt32(temp);
+            return reverse;
         }
     }
 }
