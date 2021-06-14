@@ -12,13 +12,11 @@ namespace DotnetIntern2021Test.Basic
     {
         private readonly Exercise14 exercise14 = new();
         [TestCase(5, 1)]
-
         [TestCase(13, 2)]
         [TestCase(4, 0)]
         public void Test_Count(int a, int expected)
-
         {
-            Assert.AreEqual(exercise14.count(a), expected);
+            Assert.AreEqual(exercise14.Count(a), expected);
         }
     }
 }
