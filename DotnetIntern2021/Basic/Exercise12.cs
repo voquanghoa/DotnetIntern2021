@@ -8,7 +8,8 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise12
     {
-        public int palindrome(int n)
+        public int Palindrome(int n)
+
         {
             string s = n.ToString();
             String temp = "";
