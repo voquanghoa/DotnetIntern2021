@@ -24,7 +24,8 @@ namespace DotnetIntern2021.Basic
                                     {
                                         if (s.CompareTo(ip3 + d.ToString()) == 0)
                                         {
-                                            result.Add(a.ToString() + "." + b.ToString() + "." + c.ToString() + "." + d.ToString());
+                                            result.Add($"{a}.{b}.{c}.{d}");
+
                                         }
                                     }
                             }
