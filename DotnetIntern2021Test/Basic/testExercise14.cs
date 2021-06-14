@@ -11,7 +11,8 @@ namespace DotnetIntern2021Test.Basic
 
     {
         private readonly Exercise14 exercise14 = new();
-        [TestCase(5,1)]
+        [TestCase(5, 1)]
+
         [TestCase(13, 2)]
         [TestCase(4, 0)]
         public void test(int a, int expected)
