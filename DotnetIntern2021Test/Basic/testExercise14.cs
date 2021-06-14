@@ -15,7 +15,8 @@ namespace DotnetIntern2021Test.Basic
 
         [TestCase(13, 2)]
         [TestCase(4, 0)]
-        public void test(int a, int expected)
+        public void Test_Count(int a, int expected)
+
         {
             Assert.AreEqual(exercise14.count(a), expected);
         }
