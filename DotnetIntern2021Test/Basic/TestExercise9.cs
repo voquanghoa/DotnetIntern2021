@@ -8,7 +8,7 @@ using DotnetIntern2021.Basic;
 
 namespace DotnetIntern2021Test.Basic
 {
-    public class testExercise9
+    public class TestExercise9
     {
         private readonly Exercise9 exercise9 = new Exercise9();
         [TestCase(9, 3)]
@@ -16,7 +16,7 @@ namespace DotnetIntern2021Test.Basic
         [TestCase(-5, -1)]
         public void test(double a, double expected)
         {
-            Assert.AreEqual(exercise9.squareRoot(a), expected);
+            Assert.AreEqual(exercise9.SquareRoot(a), expected);
         }
     }
 }
