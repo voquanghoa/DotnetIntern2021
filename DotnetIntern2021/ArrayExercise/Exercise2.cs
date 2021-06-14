@@ -12,7 +12,7 @@ namespace DotnetIntern2021.ArrayExercise
         {
             int n = a.Length;
             Array.Sort(a);
-            return (a[n-1] + a[n-2] + a[n-3]);
+            return a[n-1] + a[n-2] + a[n-3];
         }
     }
 }
