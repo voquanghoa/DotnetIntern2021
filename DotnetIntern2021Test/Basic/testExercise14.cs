@@ -7,7 +7,8 @@ using DotnetIntern2021.Basic;
 using NUnit.Framework;
 namespace DotnetIntern2021Test.Basic
 {
-    public class testExercise14
+    public class TestExercise14
+
     {
         private readonly Exercise14 exercise14 = new();
         [TestCase(5,1)]
