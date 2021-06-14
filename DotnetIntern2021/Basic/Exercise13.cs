@@ -4,7 +4,8 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise13
     {
-        public List<String> restoreIpAddresses(String s)
+        public List<String> RestoreIpAddresses(String s)
+
         {
             var result = new List<String>();
             for (int a = 0; a <= 255; a++)
