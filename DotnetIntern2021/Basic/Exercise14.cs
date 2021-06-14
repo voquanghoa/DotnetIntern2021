@@ -8,7 +8,7 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise14
     {
-        public int count(int n)
+        public int Count(int n)
         {
             int count = 0;
             while (n >= 5)
