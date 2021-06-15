@@ -49,9 +49,9 @@ namespace DotnetIntern2021.Basic
             int reverse = 0, rem;
             while (temp != 0)
             {
-                rem = temp % 10;
-                reverse = reverse * 10 + rem;
+                reverse = reverse * 10 +  temp % 10;
                 temp /= 10;
+
             }
             if (reverse == n) return true;
             else return false;
