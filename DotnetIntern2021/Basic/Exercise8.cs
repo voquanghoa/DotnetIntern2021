@@ -5,17 +5,19 @@ namespace DotnetIntern2021.Basic
     {
         public double Pi()
         {
-            int i = 3;
+            double i = 3;
             double s = 0;
             int check = 1;
-            while (i <= 5000)
+            while (4 / (2 * i + 1) >= 0.00001)
             {
-                s = s + Math.Pow(-1, check) * (Math.Pow(i, -1));
-                if (check == 1) check = 2;
-                else check = 1;
+                if (check % 2 == 0)
+                    s += Math.Pow(i, -1);
+                else 
+                    s -= Math.Pow(i, -1);
+                check++;
                 i += 2;
             }
-            return Math.Round((1 + s) * 4, 4);
+            return (1 + s) * 4;
         }
     }
 
