@@ -15,7 +15,7 @@ namespace DotnetIntern2021.Basic
                 x = root;
                 root = x - (x * x - n) / (2 * x);
             }
-            return Math.Round(root, 4);
+            return root;
         }
     }
 
