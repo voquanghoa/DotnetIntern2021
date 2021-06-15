@@ -16,7 +16,8 @@ namespace DotnetIntern2021.Basic
                 int sum = 0;
                 while (temp > 0)
                 {
-                    sum += Convert.ToInt32(Math.Pow(temp % 10, 2));
+                    sum += (temp % 10) * (temp % 10);
+
                     temp /= 10;
                 }
                 if (sum < 10)
