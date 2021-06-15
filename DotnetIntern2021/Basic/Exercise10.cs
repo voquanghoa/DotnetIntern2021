@@ -13,7 +13,8 @@ namespace DotnetIntern2021.Basic
             while (true)
             {
                 count++;
-                root = x - (Math.Pow(x, 3) - n) / (3 * x * x);
+                root = x - (x * x * x  - n) / (3 * x * x);
+
 
                 if (Math.Abs(root - x) < 0.00001)
                     break;
