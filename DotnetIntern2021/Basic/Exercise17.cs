@@ -19,8 +19,8 @@ namespace DotnetIntern2021.Basic
             {
                 if (checkPrime[i] == 1 && CheckPalindrome(i))
                 {
-                    answer = i;
-                    break;
+                    return i;
+
                 }
                 i++;
             }
