@@ -12,8 +12,8 @@ namespace DotnetIntern2021Test.Basic
     {
         private readonly Exercise10 exercise10 = new();
         [TestCase(8,2)]
-        [TestCase(9,2.0801)]
-        [TestCase(-25, -2.924)]
+        [TestCase(9,2.080083823051904
+        [TestCase(-25, -2.924017738212866)]
         public void Test(double a, double expected)
         {
             Assert.AreEqual(exercise10.CubeRoot(a), expected);
