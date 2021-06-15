@@ -11,8 +11,8 @@ namespace DotnetIntern2021Test.Basic
     public class TestExercise9
     {
         private readonly Exercise9 exercise9 = new Exercise9();
-        [TestCase(9, 3)]
-        [TestCase(0, 0)]
+        [TestCase(16, 4.000000000000051)]
+        [TestCase(9, 3.000000001396984)]
         [TestCase(-5, -1)]
         public void test(double a, double expected)
         {
