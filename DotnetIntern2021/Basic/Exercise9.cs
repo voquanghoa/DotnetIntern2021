@@ -6,21 +6,15 @@ namespace DotnetIntern2021.Basic
     {
         public double SquareRoot(double n)
         {
-            double x = n;
-            double root;
-            int count = 0;
-
             if (n == 0) return 0;
             if (n < 0) return -1;
-            while (true)
+            double x = n;
+            double root = x - (x * x - n) / (2 * x); ;
+            while (Math.Abs(root - x) >= 0.0001)
             {
-                count++;
-                root = x - (Math.Pow(x, 2) - n) / (2 * x);
-                if (Math.Abs(root - x) < 0.0001)
-                    break;
                 x = root;
+                root = x - (x * x - n) / (2 * x);
             }
-
             return Math.Round(root, 4);
         }
     }
