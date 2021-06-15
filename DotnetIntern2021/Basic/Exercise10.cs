@@ -14,7 +14,6 @@ namespace DotnetIntern2021.Basic
                 x = root;
                 root = x - (x*x*x - n) / (3 * x * x);
             }
-            Console.WriteLine(root);
             return root;
         }
 
