@@ -22,8 +22,8 @@ namespace DotnetIntern2021.Basic
                 }
                 if (sum < 10)
                 {
-                    if (sum == 1 || sum == 7) return true;
-                    else return false;
+                    return sum == 1 || sum == 7;
+
                 }
                 temp = sum;
             }
