@@ -53,8 +53,7 @@ namespace DotnetIntern2021.Basic
                 temp /= 10;
 
             }
-            if (reverse == n) return true;
-            else return false;
+            return reverse == n;
         }
     }
 }
