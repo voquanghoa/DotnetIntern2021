@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,28 +11,13 @@ namespace DotnetIntern2021.Basic
     {
         public int Reverse(int n)
         {
-            String s = RadixChange(n);
-            int m = 0;
-            int h = s.Length - 1;
-            for (int i = 0; i <= h; i++)
+            var result = 0;
+            while (n > 0)
             {
-                if (s[i].CompareTo('1') == 0)
-                {
-                    m = m + Convert.ToInt32(Math.Pow(2, h - i));
-                }
+                result = (result << 1) | (n & 1);
+                n >>= 1;
             }
-            return m;
-        }
-        public string RadixChange(int n)
-        {
-            String a = "";
-            for (int i = 0; n > 0; i++)
-            {
-                a = a + (n % 2).ToString();
-                n = n / 2;
-            }
-            int h = a.Length;
-            return a;
+            return result;
         }
     }
 }
