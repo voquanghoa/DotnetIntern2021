@@ -13,7 +13,7 @@ namespace DotnetIntern2021.ArrayExercise
             int sum = 0;
             foreach(int item in a)
             {
-                int root = Convert.ToInt32(Math.Sqrt(item));
+                int root = (int)Math.Sqrt(item);
                 if (root * root == item) sum += item;
             }
             return sum;
