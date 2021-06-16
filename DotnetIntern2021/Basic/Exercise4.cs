@@ -20,7 +20,7 @@ namespace DotnetIntern2021.Basic
             int f1 = 1;
             int current = 1;
             
-            while (S < n)
+            while (current < n)
             {
                 result.Add(current);
                 current = f0 + f1;
