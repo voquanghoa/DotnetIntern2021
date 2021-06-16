@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +11,12 @@ namespace DotnetIntern2021Test.Basic
     public class TestExercise10
     {
         private readonly Exercise10 exercise10 = new();
-        [TestCase(8, 2)]
-        [TestCase(9, 2.0800838230519045)]
-        [TestCase(-25, -2.924017738212866)]
-        public void Test(double a, double expected)
+        [TestCase(8, 2, 0.000001)]
+        [TestCase(9, 2.0800838230519045, 0.000001)]
+        [TestCase(-25, -2.924017738212866, 0.000001)]
+        public void Test(double a, double expected, double epsilon)
         {
-            Assert.AreEqual(exercise10.CubeRoot(a), expected);
+            Assert.AreEqual(exercise10.CubeRoot(a,epsilon), expected);
         }
     }
 }
