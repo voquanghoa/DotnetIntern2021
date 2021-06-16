@@ -20,7 +20,8 @@ namespace DotnetIntern2021.Basic
                 digits += Math.Log10(i);
             }
 
-            return (int)Math.Floor(digits) + 1;
+            return (int)digits + 1;
+
         }
     }
 }
