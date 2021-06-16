@@ -11,12 +11,13 @@ namespace DotnetIntern2021Test.Basic
     public class TestExercise9
     {
         private readonly Exercise9 exercise9 = new Exercise9();
+        const double epsilon = 0.0001;
         [TestCase(16, 4.000000000000051)]
         [TestCase(9, 3.000000001396984)]
         [TestCase(-5, -1)]
         public void test(double a, double expected)
         {
-            Assert.AreEqual(exercise9.SquareRoot(a), expected);
+            Assert.AreEqual(exercise9.SquareRoot(a,epsilon), expected);
         }
     }
 }
