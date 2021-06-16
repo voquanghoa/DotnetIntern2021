@@ -6,13 +6,14 @@ namespace DotnetIntern2021.Basic
     {
         public double CubeRoot(double n)
         {
-            double x = n;
-            double root = x - (x*x*x - n) / (3 * x * x);
+            const double epsilon = 0.000001;
+            var x = n;
+            var root = x - (x * x * x - n) / (3 * x * x);
 
-            while (Math.Abs(root - x) > 0.000001)
+            while (Math.Abs(root - x) > epsilon)
             {
                 x = root;
-                root = x - (x*x*x - n) / (3 * x * x);
+                root = x - (x * x * x - n) / (3 * x * x);
             }
             return root;
         }
