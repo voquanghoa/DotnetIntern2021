@@ -10,10 +10,11 @@ namespace DotnetIntern2021.Basic
     {
         public int Palindrome(int n)
         {
-            int temp = n;
-            int reverse = 0, rem;
+            var temp = n;
+            var reverse = 0;
             while (temp != 0)
             {
+                var rem;
                 rem = temp % 10;
                 reverse = reverse * 10 + rem;
                 temp /= 10;
