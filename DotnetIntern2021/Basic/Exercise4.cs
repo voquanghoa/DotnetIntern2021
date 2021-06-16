@@ -10,24 +10,24 @@ namespace DotnetIntern2021.Basic
     {
         public List<int> Fibo(int n)
         {
-            var a = new  List<int>();
+            var result = new List<int>();
             if (n == 1)
             {
-                a.Add(1);
-                return a;
+                result.Add(1);
+                return result;
             }
             int f0 = 1;
             int f1 = 1;
-            int S = 1;
+            int current = 1;
             
             while (S < n)
             {
-                a.Add(S);
-                S = f0 + f1;
+                result.Add(current);
+                current = f0 + f1;
                 f0 = f1;
-                f1 = S;
+                f1 = current;
             }
-            return a;
+            return result;
         }
     }
 }
