@@ -14,9 +14,7 @@ namespace DotnetIntern2021.Basic
             var reverse = 0;
             while (temp != 0)
             {
-                var rem;
                 reverse = reverse * 10 + temp % 10;
-
                 temp /= 10;
             }
             return reverse;
