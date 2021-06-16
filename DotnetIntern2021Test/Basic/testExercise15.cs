@@ -12,7 +12,6 @@ namespace DotnetIntern2021Test.Basic
         private readonly Exercise15 exercise15 = new();
         [TestCase(7,4)]
         [TestCase(1,1)]
-        [TestCase(-2, 0)]
         [TestCase(120, 199)]
         public void test(int a, int expected)
         {
