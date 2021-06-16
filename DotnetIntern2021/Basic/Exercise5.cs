@@ -10,21 +10,19 @@ namespace DotnetIntern2021.Basic
     {
         public List<int> Bai5(int m)
         {
-            var a = new List<int>();
-            int[] temp = new int[3];
-            int[] answer = new int[m];
-            for (int i = 10; i < m; i++)
+            var result = new List<int>();
+            for (var i = 10; i < m; i++)
             {
-                int sum = SumCS(i);
-                if (sum == i) a.Add(i);
+                var sum = SumCS(i);
+                if (sum == i) result.Add(i);
             }
-            return a;
+            return result;
         }
         public int SumCS(int a)
         {
-            int answer = 0;
-            int temp = a;
-            int length = 0;
+            var answer = 0;
+            var temp = a;
+            var length = 0;
             while (temp > 0)
             {
                 temp = temp / 10;
@@ -39,8 +37,8 @@ namespace DotnetIntern2021.Basic
         }
         public int Pow(int n, int m)
         {
-            int ans = 1;
-            for (int i = 1; i <= m; i++) ans *= n;
+            var ans = 1;
+            for (var i = 1; i <= m; i++) ans *= n;
             return ans;
         }
     }
