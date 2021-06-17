@@ -16,9 +16,9 @@ namespace DotnetIntern2021.Basic
                 result.Add(1);
                 return result;
             }
-            int f0 = 1;
-            int f1 = 1;
-            int current = 1;
+            var f0 = 1;
+            var f1 = 1;
+            var current = 1;
             
             while (current < n)
             {
