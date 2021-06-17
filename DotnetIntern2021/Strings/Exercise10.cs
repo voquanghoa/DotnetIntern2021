@@ -10,16 +10,12 @@ namespace DotnetIntern2021.Strings
     {
         public List<string> SeparateFullName(string fullName)
         {
-            int i = fullName.Length - 1;
-            while (i >= 0 && fullName[i] != ' ')
-            {
-                i--;
-            }
+            int lastSpaceIndex = fullName.LastIndexOf(' ');
 
             return new List<string>
             {
-                fullName.Substring(0, i),
-                fullName.Substring(i + 1)
+                fullName.Substring(0, lastSpaceIndex),
+                fullName.Substring(lastSpaceIndex + 1)
             };
         }
 
