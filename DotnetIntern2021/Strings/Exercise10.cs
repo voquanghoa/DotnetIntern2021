@@ -11,14 +11,16 @@ namespace DotnetIntern2021.Strings
         public List<string> SeparateFullName(string fullName)
         {
             int i = fullName.Length - 1;
-            while (fullName[i] != ' ')
+            while (i >= 0 && fullName[i] != ' ')
             {
                 i--;
             }
-            var answer = new List<string>();
-            answer.Add(fullName.Substring(0, i));
-            answer.Add(fullName.Substring(i + 1, fullName.Length - i - 1));
-            return answer;
+
+            return new List<string>
+            {
+                fullName.Substring(0, i),
+                fullName.Substring(i + 1)
+            };
         }
 
     }
