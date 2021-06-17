@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Text;
 
 namespace DotnetIntern2021.Strings
 {
@@ -6,14 +7,14 @@ namespace DotnetIntern2021.Strings
     {
         public string snakeCase(String upperCase)
         {
-            string snakeCase = "";
+            StringBuilder snakeCase = new StringBuilder("");
             for (int i = 0; i < upperCase.Length; i++)
             {
                 if (upperCase[i] >= 'A' && upperCase[i] <= 'Z' && i != 0)
-                    snakeCase += "_";
-                snakeCase += upperCase[i];
+                    snakeCase.Append("_");
+                snakeCase.Append(upperCase[i]);
             }
-            return snakeCase.ToLower();
+            return snakeCase.ToString().ToLower();
         }
     }
 }
