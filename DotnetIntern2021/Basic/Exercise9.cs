@@ -4,6 +4,7 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise9
     {
+        public const double epsilon = 0.0001;
         public double SquareRoot(double n, double epsilon)
         {
             if (n == 0) return 0;
