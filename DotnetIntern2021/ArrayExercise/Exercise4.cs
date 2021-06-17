@@ -8,36 +8,39 @@ namespace DotnetIntern2021.ArrayExercise
 {
     public class Exercise4
     {
-        static int MAX = 1000000;
-        int[] checkPrime = new int[MAX + 2];
-        public int Ex4(int[] a)
+        private static int MAX = 1000000;
+        private static bool[] checkPrime = InitEratosthenes();
+
+
+        public int Ex4(int[] array)
         {
             int sum = 0;
-            Eratosthenes();
-            int n = a.Length;
-            for (int i = 0; i < n; i++)
+            foreach (var number in array)
             {
-                Console.WriteLine(a[i].ToString() + ": " +  checkPrime[a[i]].ToString());
-                if (checkPrime[a[i]] == 1) sum += a[i];
+                if (checkPrime[number]) sum += number;
             }
+
             return sum;
         }
-        public void Eratosthenes()
+        public static bool[] InitEratosthenes()
         {
-            for (int i = 2; i <= MAX; i++)
+            var checkPrime = new bool[MAX];
+            for (int i = 2; i < MAX; i++)
             {
-                checkPrime[i] = 1;
+                checkPrime[i] = true;
             }
-            for (int i = 2; i <= MAX; i++)
+            for (int i = 2; i < MAX; i++)
             {
-                if (checkPrime[i] == 1)
+                if (checkPrime[i])
                 {
-                    for (int j = i * 2; j <= MAX; j += i)
+                    for (int j = i * 2; j < MAX; j += i)
                     {
-                        checkPrime[j] = 0;
+                        checkPrime[j] = false;
                     }
                 }
             }
+
+            return checkPrime;
         }
     }
 }
