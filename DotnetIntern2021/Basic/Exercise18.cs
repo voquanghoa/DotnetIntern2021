@@ -10,16 +10,10 @@ namespace DotnetIntern2021.Basic
     {
         public bool HappyNumber(int n)
         {
-            int temp = n;
+            var temp = n;
             while (true)
             {
-                int sum = 0;
-                while (temp > 0)
-                {
-                    sum += (temp % 10) * (temp % 10);
-
-                    temp /= 10;
-                }
+                var sum = Convert(temp);
                 if (sum < 10)
                 {
                     return sum == 1 || sum == 7;
@@ -27,6 +21,17 @@ namespace DotnetIntern2021.Basic
                 }
                 temp = sum;
             }
+        }
+        public int Convert(int temp)
+        {
+            var sum = 0;
+            while (temp > 0)
+            {
+                sum += (temp % 10) * (temp % 10);
+
+                temp /= 10;
+            }
+            return sum;
         }
     }
 }
