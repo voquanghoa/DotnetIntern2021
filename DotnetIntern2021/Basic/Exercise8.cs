@@ -5,8 +5,8 @@ namespace DotnetIntern2021.Basic
     {
         public double Pi()
         {
-            double i = 3;
-            double s = 0;
+            var i = 3.0;
+            var s = 0.0;
             int check = 1;
             while (4 / (2 * i + 1) >= 0.00001)
             {
