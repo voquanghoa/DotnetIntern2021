@@ -3,8 +3,8 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise8
     {
-        const double epsilon = 0.00001;
-        public double Pi()
+        public const double epsilon = 0.00001;
+        public double Pi(double epsilon)
         {
             var i = 3.0;
             var s = 0.0;
