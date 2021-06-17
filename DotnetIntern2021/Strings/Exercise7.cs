@@ -10,17 +10,34 @@ namespace DotnetIntern2021.Strings
     {
         public string Ex7(string s)
         {
-            string ans = "";
+            var stringBuilder = new StringBuilder();
+            var lastCharacter = '0';
+            var count = 0;
             for (int i = 0; i < s.Length; i++)
             {
-                if (s[i] < '1' || s[i] > '9') ans += s[i];
+                if (char.IsDigit(s[i]))
+                {
+                    count = count * 10 + (s[i] - '0');
+                }
                 else
                 {
-                    for (int j = 0; j < Convert.ToInt32(s[i].ToString()) - 1; j++) 
-                        ans += s[i - 1];
+                    for (var j = 0; j < count - 1; j++)
+                    {
+                        stringBuilder.Append(lastCharacter);
+                    }
+
+                    lastCharacter = s[i];
+                    stringBuilder.Append(s[i]);
+                    count = 0;
                 }
             }
-            return ans;
+
+            for (var j = 0; j < count - 1; j++)
+            {
+                stringBuilder.Append(lastCharacter);
+            }
+
+            return stringBuilder.ToString();
         }
     }
 }

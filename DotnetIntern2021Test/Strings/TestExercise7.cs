@@ -13,6 +13,7 @@ namespace DotnetIntern2021Test.Strings
         [TestCase("ab2c", "abbc")]
         [TestCase("ab2c5", "abbccccc")]
         [TestCase("a5b2c5", "aaaaabbccccc")]
+        [TestCase("a11b2c5", "aaaaaaaaaaabbccccc")]
         public void Test(string s, string expected)
         {
             Assert.AreEqual(exercise7.Ex7(s), expected);
