@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,50 +8,47 @@ namespace DotnetIntern2021.Basic
 {
     public class Exercise17
     {
-        static int MAX = 1000000;
-        int[] checkPrime = new int[MAX + 2];
+        private static int MAX = 1000000;
+        private static bool[] checkPrime = InitEratosthenes();
         public int Ex17(int n)
         {
-            int answer = 0;
-            Eratosthenes();
-            int i = n + 1;
-            while (true)
+            for (var i = n + 1; true; i++)
             {
-                if (checkPrime[i] == 1 && CheckPalindrome(i))
+                if (checkPrime[i] && CheckPalindrome(i))
                 {
                     return i;
-
                 }
                 i++;
             }
-            return answer;
         }
-        public void Eratosthenes()
+        public static bool[] InitEratosthenes()
         {
-            for (int i = 2; i <= MAX; i++)
+            var checkPrime = new bool[MAX];
+            for (int i = 2; i < MAX; i++)
             {
-                checkPrime[i] = 1;
+                checkPrime[i] = true;
             }
-            for (int i = 2; i <= MAX; i++)
+            for (int i = 2; i < MAX; i++)
             {
-                if (checkPrime[i] == 1)
+                if (checkPrime[i])
                 {
-                    for (int j = i * 2; j <= MAX; j += i)
+                    for (int j = i * 2; j < MAX; j += i)
                     {
-                        checkPrime[j] = 0;
+                        checkPrime[j] = false;
                     }
                 }
             }
+
+            return checkPrime;
         }
         public bool CheckPalindrome(int n)
         {
             int temp = n;
-            int reverse = 0, rem;
+            int reverse = 0;
             while (temp != 0)
             {
-                reverse = reverse * 10 +  temp % 10;
+                reverse = reverse * 10 + temp % 10;
                 temp /= 10;
-
             }
             return reverse == n;
         }
