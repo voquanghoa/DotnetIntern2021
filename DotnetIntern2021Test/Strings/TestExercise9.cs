@@ -11,6 +11,7 @@ namespace DotnetIntern2021Test.Strings
     {
         private readonly Exercise9 exercise9 = new();
         [TestCase("8938505974194",true)]
+        [TestCase("8938505974196", false)]
         public void Test(string s, bool expected)
         {
             Assert.AreEqual(exercise9.BarcodeEAN(s), expected);

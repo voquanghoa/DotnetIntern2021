@@ -11,10 +11,16 @@ namespace DotnetIntern2021.Strings
         public bool BarcodeEAN(string s)
         {
             var sum = 0;
-            for (var i = 1; i <= s.Length; i++)
+            for (var i = 0; i < s.Length; i++)
             {
-                if (i % 2 == 0) sum += 3 * ((int)s[i - 1] - 48);
-                else sum += ((int)s[i - 1] - 48);
+                if (i % 2 == 1)
+                {
+                    sum += 3 * (s[i] - '0');
+                }
+                else
+                {
+                    sum += s[i] - '0';
+                }
             }
             return sum % 10 == 0;
         }
