@@ -20,11 +20,8 @@ namespace DotnetIntern2021.Strings
                     i++;
                     count++;
                 }
-                if (count > 1)
-                {
-                    ans.Append(s[i] + count.ToString());
-                }
-                else ans.Append(s[i]);
+                ans.Append(s[i]);
+                if (count > 1) ans.Append(count.ToString());
                 i++;
             }
             return ans.ToString();
