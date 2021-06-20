@@ -10,11 +10,11 @@ namespace DotnetIntern2021.Strings
     {
         public string Ex6(string s)
         {
-            string ans = "";
-            int i = 0;
+            StringBuilder ans = new StringBuilder();
+            var i = 0;
             while (i < s.Length)
             {
-                int count = 1;
+                var count = 1;
                 while (i < s.Length - 1 && s[i] == s[i + 1])
                 {
                     i++;
@@ -22,13 +22,12 @@ namespace DotnetIntern2021.Strings
                 }
                 if (count > 1)
                 {
-                    ans += s[i] + count.ToString();
+                    ans.Append(s[i] + count.ToString());
                 }
-                else ans += s[i];
+                else ans.Append(s[i]);
                 i++;
             }
-            Console.WriteLine(ans);
-            return ans;
+            return ans.ToString();
         }
     }
 }
