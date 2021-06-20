@@ -10,14 +10,11 @@ namespace DotnetIntern2021.Strings
     {
         public bool Palindrome(string s)
         {
-            string left = "";
-            string right = "";
-            for (int i = s.Length/2 - 1; i>= 0 ; i--)
+            for (var i = 0; i <= s.Length / 2 - 1; i++)
             {
-                left += s[i];
-                right += s[s.Length - i - 1];
+                if (s[i] != s[s.Length - i - 1]) return false;
             }
-            return left == right;
+            return true;
         }
     }
 }
