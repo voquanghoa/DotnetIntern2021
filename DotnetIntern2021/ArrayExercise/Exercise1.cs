@@ -14,8 +14,14 @@ namespace DotnetIntern2021.ArrayExercise
             int n = a.Length;
             for (int i = 0; i < n; i++)
             {
-                if (dict.ContainsKey(a[i])) dict[a[i]]++;
-                else dict.Add(a[i], 1);
+                if (dict.ContainsKey(a[i])) 
+                {
+                    dict[a[i]]++;
+                }
+                else 
+                {
+                    dict.Add(a[i], 1);
+                }
             }
 
             List<int> answer = new();
