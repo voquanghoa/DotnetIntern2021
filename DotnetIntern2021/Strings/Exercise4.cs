@@ -14,7 +14,7 @@ namespace DotnetIntern2021.Strings
             int i = 0;
             while (i < s.Length)
             {
-                if (s[i] >= '1' && s[i] <= '9')
+                if (char.IsDigit(s[i]))
                 {
                     tempString += s[i];
                 }
