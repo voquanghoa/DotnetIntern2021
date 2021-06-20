@@ -23,10 +23,6 @@ namespace DotnetIntern2021.ArrayExercise
             {
                 if (item.Value > 1) answer.Add(item.Key);
             }
-            foreach (var item in answer)
-            {
-                Console.WriteLine(item);
-            }
             return answer;
         }
     }
