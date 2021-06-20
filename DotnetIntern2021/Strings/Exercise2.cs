@@ -15,7 +15,7 @@ namespace DotnetIntern2021.Strings
             int i = 1;
             while(i < snakeCase.Length)
             {
-                if (string.Equals(snakeCase[i].ToString(), "_"))
+                if (snakeCase[i] == '_')
                 {
                     upperCase += snakeCase[i + 1].ToString().ToUpper();
                     i++;
