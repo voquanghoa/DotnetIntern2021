@@ -9,24 +9,22 @@ namespace DotnetIntern2021.Strings
     {
         public int SumEx4(string s)
         {
-            int sum = 0;
-            string tempString = "";
-            int i = 0;
-            while (i < s.Length)
+            var tempNumber = 0;
+            var sum1 = 0;
+            for (var i = 0; i < s.Length; i++)
             {
                 if (char.IsDigit(s[i]))
                 {
-                    tempString += s[i];
+                    tempNumber = tempNumber * 10 + (s[i] - '0');
                 }
                 else
                 {
-                    if (tempString != "") sum += Convert.ToInt32(tempString);
-                    tempString = "";
+                    if (tempNumber != 0) sum1 += tempNumber;
+                    tempNumber = 0;
                 }
-                i++;
             }
-            if (!string.Equals(tempString, "")) sum += Convert.ToInt32(tempString);
-            return sum;
+            if (tempNumber != 0) sum1 += tempNumber;
+            return sum1;
         }
     }
 }
