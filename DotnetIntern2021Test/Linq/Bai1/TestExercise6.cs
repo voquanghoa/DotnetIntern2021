@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
             {
                 "Black Pink", "Hyun Bin", "Bo Gum"
             };
-            Assert.AreEqual(exercise6.FindStudentContainsXname("B"), answer);
+            Assert.AreEqual(exercise6.FindStudentContainsName("B"), answer);
         }
     }
 }
