@@ -13,7 +13,7 @@ namespace DotnetIntern2021Test.Strings
         [TestCase("abcdef","fedcba")]
         [TestCase("","")]
         [TestCase("123xyz","zyx321")]
-        public void Test(string s, string ans)
+        public void Test_Reverse(string s, string ans)
         {
             Assert.AreEqual(exercise3.Reverse(s), ans);
         }
