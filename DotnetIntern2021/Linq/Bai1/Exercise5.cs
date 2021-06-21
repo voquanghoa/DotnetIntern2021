@@ -11,14 +11,14 @@ namespace DotnetIntern2021.Linq.Bai1
         private readonly DataFactory dataFactory = new();
         public List<string> MaxScoreGroupByClass()
         {
-            var result = new List<string>();
-            var groupedResult = dataFactory.Students.GroupBy(s => s.Class.Name);
-            foreach (var classGroup in groupedResult)
-            {
-                var x = classGroup.OrderByDescending(s => s.Score).First().Name;
-                result.Add(x);
-            }
-            return result;
+            return dataFactory.Students
+                .AsEnumerable()
+                .GroupBy(s => s.Class.Name)
+                .Select(g => 
+                        g.OrderByDescending(s => s.Score)
+                        .First()
+                        .Name)
+                .ToList();
         }
     }
 }
