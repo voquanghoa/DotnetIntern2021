@@ -11,7 +11,7 @@ namespace DotnetIntern2021.Linq.Bai1
         private static DataFactory dataFactory = new();
         public double Score(int studentId)
         {
-            return dataFactory.Students.Where(s => s.Id == studentID)
+            return dataFactory.Students.Where(s => s.Id == studentId)
                   .Select(s => s.Score).First();
         }
     }
