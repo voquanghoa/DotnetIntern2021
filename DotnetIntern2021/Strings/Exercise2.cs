@@ -10,21 +10,24 @@ namespace DotnetIntern2021.Strings
     {
         public string Ex2(string snakeCase)
         {
-            string upperCase = "";
-            upperCase += snakeCase[0].ToString().ToUpper();
+            StringBuilder upperCase = new();
+            upperCase.Append(char.ToUpper(snakeCase[0]));
             int i = 1;
             while(i < snakeCase.Length)
             {
                 if (snakeCase[i] == '_')
                 {
-                    upperCase += snakeCase[i + 1].ToString().ToUpper();
+                    upperCase.Append(char.ToUpper(snakeCase[i + 1]));
                     i++;
                 }
-                else upperCase += snakeCase[i];
+                else
+                {
+                    upperCase.Append(snakeCase[i]);
+                }
                 i++;
             }
 
-            return upperCase;
+            return upperCase.ToString();
         }
     }
 }
