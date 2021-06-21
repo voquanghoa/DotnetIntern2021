@@ -19,12 +19,11 @@ namespace DotnetIntern2021.Strings
                 }
                 else
                 {
-                    if (tempNumber != 0) sum1 += tempNumber;
+                    sum1 += tempNumber;
                     tempNumber = 0;
                 }
             }
-            if (tempNumber != 0) sum1 += tempNumber;
-            return sum1;
+            return sum1 + tempNumber;
         }
     }
 }
