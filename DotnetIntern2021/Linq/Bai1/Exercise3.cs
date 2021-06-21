@@ -12,8 +12,7 @@ namespace DotnetIntern2021.Linq.Bai1
         public List<string> FindStudentByClass(string className)
         {
             return dataFactory.Students
-                .Where(s => s.Class.Name
-                .Equals(className))
+                .Where(s => s.Class.Name.Equals(className))
                 .Select(s => s.Name)
                 .ToList();
         }
