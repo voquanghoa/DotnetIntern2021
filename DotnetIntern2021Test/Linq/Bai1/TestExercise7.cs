@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
             {
                 9.0, 9.5, 8.0, 10.0, 7.0, 6.0, 4.0
             };
-            Assert.AreEqual(exercise7.FindAllScore(), answer);
+            Assert.AreEqual(exercise7.FindAllScores(), answer);
         }
     }
 }

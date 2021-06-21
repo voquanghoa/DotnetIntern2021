@@ -9,7 +9,7 @@ namespace DotnetIntern2021.Linq.Bai1
     public class Exercise7
     {
         private readonly DataFactory dataFactory = new();
-        public List<double> FindAllScore()
+        public List<double> FindAllScores()
         {
             return dataFactory.Students
                 .Select(s => s.Score)
