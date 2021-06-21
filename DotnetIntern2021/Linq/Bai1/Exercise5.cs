@@ -13,9 +13,9 @@ namespace DotnetIntern2021.Linq.Bai1
         {
             var result = new List<string>();
             var groupedResult = dataFactory.Students.GroupBy(s => s.Class.Name);
-            foreach (var ageGroup in groupedResult)
+            foreach (var scoreGroup in groupedResult)
             {
-                var x = ageGroup.OrderByDescending(s => s.Score).First().Name;
+                var x = scoreGroup.OrderByDescending(s => s.Score).First().Name;
                 result.Add(x);
             }
             return result;
