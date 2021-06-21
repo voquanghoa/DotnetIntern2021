@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetIntern2021", "DotnetIntern2021\DotnetIntern2021.csproj", "{2116F1BB-38FE-4BF3-8836-4690278D3A66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetIntern2021", "DotnetIntern2021\DotnetIntern2021.csproj", "{2116F1BB-38FE-4BF3-8836-4690278D3A66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetIntern2021Test", "DotnetIntern2021Test\DotnetIntern2021Test.csproj", "{74CFEAB9-BFF7-4636-8E41-8149CB01FB8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetIntern2021Test", "DotnetIntern2021Test\DotnetIntern2021Test.csproj", "{74CFEAB9-BFF7-4636-8E41-8149CB01FB8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
