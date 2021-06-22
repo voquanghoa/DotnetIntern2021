@@ -15,8 +15,7 @@ namespace DotnetIntern2021.Linq.Bai1
                 .GroupBy(s => s.Class.Name)
                 .OrderByDescending(group => group.Average(s => s.Score))
                 .First()
-                .Key
-                ;
+                .Key;
         }
     }
 }
