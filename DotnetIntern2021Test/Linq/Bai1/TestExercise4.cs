@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
         public void TestEx4()
         {
             string className = "Class A";
-            var answer = 8;
+            var answer = 7.833333333333333;
             Assert.AreEqual(exercise4.AverageScoreByClassname(className),answer);
         }
     }
