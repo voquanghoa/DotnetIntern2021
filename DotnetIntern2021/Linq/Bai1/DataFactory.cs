@@ -29,8 +29,6 @@ namespace DotnetIntern2021.Linq.Bai1
             new Student(new Class() { Id = 1, Name = "Class A" }, 11, "Xin Chao", new DateTime(2002, 12, 20), 6.0),
             new Student(new Class() { Id = 1, Name = "Class A" }, 12, "OK OK", new DateTime(2002, 12, 20), 9.0),
             new Student(new Class() { Id = 2, Name = "Class B" }, 10, "Hello World B", new DateTime(2002, 12, 20), 7.0),
-            new Student(new Class() { Id = 1, Name = "Class A" }, 11, "Hello World A", new DateTime(2001, 4, 12), 7.0),
-            new Student(new Class() { Id = 1, Name = "Class A" }, 12, "Shin Dong", new DateTime(2001, 11, 10), 9.0),
         };
     }
 }
