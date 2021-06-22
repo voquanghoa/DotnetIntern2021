@@ -17,7 +17,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
             var answer = new List<int[]>()
             {
                 new[] { 4, 2 },
-                new[] { 5, 2 }
+                new[] { 6, 2 }
             };
             Assert.AreEqual(exercise10.CountScoreHigherThanEight(), answer);
         }
