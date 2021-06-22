@@ -26,7 +26,7 @@ namespace Test
             new Student(new Class() { Id = 2, Name = "Class B" }, 9, "Mickey", new DateTime(1996, 2, 10), 4.0),
             new Student(new Class() { Id = 2, Name = "Class B" }, 10, "Hello World B", new DateTime(2002, 12, 20), 7.0),
             new Student(new Class() { Id = 1, Name = "Class A" }, 11, "Hello World A", new DateTime(2001, 4, 12), 7.0),
-            new Student(new Class() { Id = 1, Name = "Class A" }, 12, "Shin Dong", new DateTime(2001, 11, 10), 6.0),
+            new Student(new Class() { Id = 1, Name = "Class A" }, 12, "Shin Dong", new DateTime(2001, 11, 10), 9.0),
         };
     }
 }
