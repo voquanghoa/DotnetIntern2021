@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
         public void TestEx3()
         {
             var className = "Class A";
-            var answer = new[] { "John", "Black Pink", "Bo Gum", "Min Ho"};
+            var answer = new[] { "John", "Black Pink", "Bo Gum", "Min Ho", "Xin Chao", "OK OK"};
             Assert.AreEqual(exercise3.FindStudentByClass(className), answer);
         }
     }
