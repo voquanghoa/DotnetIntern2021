@@ -14,7 +14,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
         [Test]
         public void Test()
         {
-            var answer = new List<string>() { "John", "Hyun Bin" };
+            var answer = new List<string>() { "John Leo", "Hyun Bin" };
             Assert.AreEqual(exercise5.MaxScoreGroupByClass(), answer);
         }
     }

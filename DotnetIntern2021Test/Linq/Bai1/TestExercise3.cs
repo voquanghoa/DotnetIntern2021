@@ -14,7 +14,7 @@ namespace DotnetIntern2021Test.Linq.Bai1
         public void TestEx3()
         {
             var className = "Class A";
-            var answer = new[] { "John", "Black Pink", "Bo Gum", "Min Ho", "Xin Chao", "OK OK"};
+            var answer = new[] { "John Leo", "Black Pink", "Bo Gum", "Min Ho", "Xin Chao", "OK OK"};
             Assert.AreEqual(exercise3.FindStudentByClass(className), answer);
         }
     }
