@@ -10,7 +10,7 @@ namespace DotnetIntern2021.Linq.Bai2
     {
         public List<int> OrderByNumberOfDigits(List<int> data)
         {
-            return data.OrderBy(data => Math.Floor(Math.Log10(data) + 1))
+            return data.OrderBy(data => (int)(Math.Log10(data) + 1))
                        .ThenBy(data => data)
                        .ToList();
         }
