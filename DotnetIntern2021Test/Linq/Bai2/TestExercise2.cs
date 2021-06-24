@@ -13,11 +13,15 @@ namespace DotnetIntern2021Test.Linq.Bai2
         [Test]
         public void TestEx01()
         {
+            var data = new List<int>
+            {
+                1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 8, 9
+            };
             var answer = new List<int>()
             {
-                -3, -2, -1
+                9, 8, 7
             };
-            Assert.AreEqual(exercise2.ThreeHighestIndexNumbers(), answer);
+            Assert.AreEqual(exercise2.ThreeHighestValues(data), answer);
         }
     }
 }
