@@ -13,7 +13,7 @@ namespace DotnetIntern2021Test.Linq.Bai2
         private readonly Exercise3 exercise3 = new();
         [TestCase(5)]
         [TestCase(8)]
-        public void TestEx03(int n)
+        public void Test_RandomNumbers(int n)
         {
             var data = new List<int>
             {
