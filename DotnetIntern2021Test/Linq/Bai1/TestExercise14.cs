@@ -18,8 +18,9 @@ namespace DotnetIntern2021Test.Linq.Bai1
             var answer = new List<string>
             {
                 "Xin Chao", "Bo Gum", "Min Ho", 
-                "John Leo", "OK OK", "Back Pink"
+                "John Leo", "OK OK", "Black Pink"
             };
+            Assert.AreEqual(exercise14.OrderStudentsByName(className), answer);
         }
     }
 }
