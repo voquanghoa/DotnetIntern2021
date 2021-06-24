@@ -6,6 +6,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetIntern2021", "DotnetI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetIntern2021Test", "DotnetIntern2021Test\DotnetIntern2021Test.csproj", "{74CFEAB9-BFF7-4636-8E41-8149CB01FB8F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "C:\Users\LUUHIEU\Desktop\Git hub photos\Test\Test.csproj", "{392D9134-0412-4E62-BBC2-34343D72CE4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{74CFEAB9-BFF7-4636-8E41-8149CB01FB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74CFEAB9-BFF7-4636-8E41-8149CB01FB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74CFEAB9-BFF7-4636-8E41-8149CB01FB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{392D9134-0412-4E62-BBC2-34343D72CE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392D9134-0412-4E62-BBC2-34343D72CE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392D9134-0412-4E62-BBC2-34343D72CE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392D9134-0412-4E62-BBC2-34343D72CE4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
