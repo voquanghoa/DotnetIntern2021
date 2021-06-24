@@ -15,7 +15,11 @@ namespace DotnetIntern2021Test.Linq.Bai2
         [TestCase(8)]
         public void TestEx03(int n)
         {
-            Assert.AreEqual(exercise3.RandomNumbers(n), n);
+            var data = new List<int>
+            {
+                1, 2, 3, 4, 5, 6, 7, -7, -6, -5, -4, -3, -2, -1
+            };
+            Assert.AreEqual(exercise3.RandomNumbers(data,n).Count, n);
         }
     }
 }
