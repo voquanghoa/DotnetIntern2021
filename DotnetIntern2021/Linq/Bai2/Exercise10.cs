@@ -10,9 +10,7 @@ namespace DotnetIntern2021.Linq.Bai2
     {
         public int MaxPerfectSquare(List<int> data)
         {
-            return data.Where(s => Math.Sqrt(s) % 1 == 0)
-                       .OrderByDescending(s => s)
-                       .First();   
+            return data.Where(s => Math.Sqrt(s) % 1 == 0).Max();
         }
     }
 }
