@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DotnetIntern2021.OOP
 {
-    class Fraction
+    public class Fraction
     {
         //Exercise 1
         public int A { get; private set; }
@@ -20,19 +20,30 @@ namespace DotnetIntern2021.OOP
             A = numerator;
             B = denominator;
         }
+        public static int GCD(int a, int b)
+        {
+            while (a != b)
+            {
+                if (a > b)
+                {
+                    a -= b;
+                }
+                else
+                {
+                    b -= a;
+                }
+            }
+            return a;
+        }
         //Exercise 2
         public static bool operator ==(Fraction a, Fraction b)
         {
-            a = Minimal(a);
-            b = Minimal(b);
-            return (a.A == b.A && a.B == b.B);
+            return a.A * b.B == a.B * b.A;
         }
 
         public static bool operator !=(Fraction a, Fraction b)
         {
-            a = Minimal(a);
-            b = Minimal(b);
-            return (a.A != b.A || a.B != b.B);
+            return !(a == b);
         }
         public override bool Equals(object obj)
         {
@@ -54,24 +65,14 @@ namespace DotnetIntern2021.OOP
         }
 
         //Exercise 3
-        public static Fraction Minimal(Fraction fraction)
+        public Fraction Minimal()
         {
-            Fraction answer = new Fraction(fraction.A, fraction.B);
-            fraction = new Fraction(Math.Abs(fraction.A), Math.Abs(fraction.B));
-            while (fraction.A != fraction.B)
-            {
-                if (fraction.A > fraction.B)
-                {
-                    fraction.A -= fraction.B;
-                }
-                else
-                {
-                    fraction.B -= fraction.A;
-                }
-            }
+            Fraction answer = new Fraction(A, B);
+            
+            int gcd = GCD(Math.Abs(A), Math.Abs(B));
 
-            answer.A = answer.A / fraction.A;
-            answer.B = answer.B / fraction.B;
+            answer.A = answer.A / gcd;
+            answer.B = answer.B / gcd;
 
             return answer;
         }
@@ -93,19 +94,10 @@ namespace DotnetIntern2021.OOP
             {
                 a.B, b.B
             };
-            while (denominatorArray[0] != denominatorArray[1])
-            {
-                if (denominatorArray[0] > denominatorArray[1])
-                {
-                    denominatorArray[0] -= denominatorArray[1];
-                }
-                else
-                {
-                    denominatorArray[1] -= denominatorArray[0];
-                }
-            }
-            int lcm = a.B * b.B / denominatorArray[0];
-            return Minimal(new Fraction(a.A * lcm / (a.B) + b.A * lcm / (b.B), lcm));
+            
+            int lcm = a.B * b.B / GCD(denominatorArray[0],denominatorArray[1]);
+            
+            return (new Fraction(a.A * lcm / (a.B) + b.A * lcm / (b.B), lcm)).Minimal();
         }
 
         public static Fraction operator -(Fraction a, Fraction b)
@@ -115,38 +107,30 @@ namespace DotnetIntern2021.OOP
 
         public static Fraction operator *(Fraction a, Fraction b)
         {
-            return Minimal(new Fraction(a.A * b.A, a.B * b.B));
+            return (new Fraction(a.A * b.A, a.B * b.B)).Minimal();
         }
 
         public static Fraction operator /(Fraction a, Fraction b)
         {
-            return Minimal(new Fraction(a.A * b.B, a.B * b.A));
+            return (new Fraction(a.A * b.B, a.B * b.A)).Minimal();
         }
 
         //Exercise 5
         public static bool operator >(Fraction a, Fraction b)
         {
-            a = Minimal(a);
-            b = Minimal(b);
             return a.A * b.B > b.A * a.B;
         }
 
         public static bool operator <(Fraction a, Fraction b)
         {
-            a = Minimal(a);
-            b = Minimal(b);
             return a.A * b.B < b.A * a.B;
         }
         public static bool operator >=(Fraction a, Fraction b)
         {
-            a = Minimal(a);
-            b = Minimal(b);
             return a.A * b.B >= b.A * a.B;
         }
         public static bool operator <=(Fraction a, Fraction b)
         {
-            a = Minimal(a);
-            b = Minimal(b);
             return a.A * b.B <= b.A * a.B;
         }
 
@@ -171,7 +155,7 @@ namespace DotnetIntern2021.OOP
         //Exercise 9
         public static Fraction operator +(Fraction fraction, int integer)
         {
-            return Minimal(new Fraction(fraction.A + integer * fraction.B, fraction.B));
+            return (new Fraction(fraction.A + integer * fraction.B, fraction.B)).Minimal();
         }
 
         public static Fraction operator -(Fraction fraction, int integer)
@@ -181,7 +165,7 @@ namespace DotnetIntern2021.OOP
 
         public static Fraction operator *(Fraction fraction, int integer)
         {
-            return Minimal(new Fraction(fraction.A * integer, fraction.B));
+            return (new Fraction(fraction.A * integer, fraction.B)).Minimal();
         }
 
         public static Fraction operator /(Fraction fraction, int integer)
@@ -190,7 +174,7 @@ namespace DotnetIntern2021.OOP
             {
                 throw new DivideByZeroException();
             }
-            return Minimal(new Fraction(fraction.A, fraction.B * integer));
+            return (new Fraction(fraction.A, fraction.B * integer)).Minimal();
         }
     }
 }
