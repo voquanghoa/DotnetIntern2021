@@ -67,14 +67,9 @@ namespace DotnetIntern2021.OOP
         //Exercise 3
         public Fraction Minimal()
         {
-            Fraction answer = new Fraction(A, B);
-            
             int gcd = GCD(Math.Abs(A), Math.Abs(B));
 
-            answer.A = answer.A / gcd;
-            answer.B = answer.B / gcd;
-
-            return answer;
+            return new Fraction(A / gcd, B / gcd);
         }
 
         //Exercise 4
@@ -90,14 +85,7 @@ namespace DotnetIntern2021.OOP
 
         public static Fraction operator +(Fraction a, Fraction b)
         {
-            var denominatorArray = new int[2]
-            {
-                a.B, b.B
-            };
-            
-            int lcm = a.B * b.B / GCD(denominatorArray[0],denominatorArray[1]);
-            
-            return (new Fraction(a.A * lcm / (a.B) + b.A * lcm / (b.B), lcm)).Minimal();
+            return new Fraction(a.A * b.B + b.A * a.B, a.B * b.B).Minimal();
         }
 
         public static Fraction operator -(Fraction a, Fraction b)
@@ -141,16 +129,10 @@ namespace DotnetIntern2021.OOP
         }
 
         //Exercise 7
-        public static Fraction IntegerToFraction(int integer)
-        {
-            return new Fraction(integer, 1);
-        }
+        public static explicit operator Fraction(int integer) => new Fraction(integer, 1);
 
         //Exercise 8
-        public float FractionToRealNumber()
-        {
-            return (float)A / B;
-        }
+        public static implicit operator float(Fraction fraction) => (float)fraction.A/ (float)fraction.B;
 
         //Exercise 9
         public static Fraction operator +(Fraction fraction, int integer)

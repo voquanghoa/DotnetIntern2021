@@ -116,14 +116,14 @@ namespace DotnetIntern2021Test.OOP
         public void Test_IntegerToFraction()
         {
             var answer = new Fraction(3, 1);
-            Assert.AreEqual(Fraction.IntegerToFraction(3), answer);
+            Assert.AreEqual((Fraction)answer, answer);
         }
         [Test]
         public void Test_FractionToRealNumber()
         {
             var fraction = new Fraction(1, 4);
             var answer = 0.25;
-            Assert.AreEqual(fraction.FractionToRealNumber(), answer);
+            Assert.AreEqual((float)fraction, answer);
         }
         [Test]
         public void Test_FractionPlusInteger()
